@@ -123,11 +123,22 @@ namespace Ex1
         }
         #endregion
 
+        public Conta(Banco banco, Cliente cliente)
+        {
+            Cliente = cliente;
+            Banco = banco;
+        }
+
         public bool Sacar(double valor, long senha)
         {
-            if (valor >= 0)
-                if (senha == this.senha)
+            if (senha == Senha)
+            {
+                if (valor >= 0 && Saldo > valor)
+                {
+                    Saldo -= valor;
                     return true;
+                }
+            }
 
             return false;
         }
@@ -140,7 +151,7 @@ namespace Ex1
 
         public double SolicitarLimite(double valor, long senha)
         {
-            return senha == this.senha ? limite : -1;
+            return senha == Senha ? Limite = banco.AprovarLimite(valor, TempoConta) : -1;
         }
     }
 }

@@ -17,14 +17,11 @@ namespace Ex1
             cliente.Nome = "Tobias Furtado";
             cliente.Cpf = 11111111111;
 
-            Conta conta = new Conta();
+            Conta conta = new Conta(banco, cliente);
             conta.Banco = banco;
             conta.Cliente = cliente;
             conta.NumConta = 10098483;
             conta.NumAgencia = 1960;
-
-            banco.setConta(conta);
-            cliente.setConta(conta);
 
 
             cliente.ListarContas();
