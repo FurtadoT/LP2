@@ -14,8 +14,8 @@ namespace Ex1
         private long senha;
         private double limite;
         private int tempoConta;
-        private List<Cliente> clientes = new List<Cliente>();
-        private List<Banco> bancos = new List<Banco>();
+        private Cliente cliente;
+        private Banco banco;
 
         #region Encapsulamentos
         public long NumConta
@@ -96,29 +96,29 @@ namespace Ex1
             }
         }
 
-        internal List<Cliente> Clientes
+        internal Cliente Cliente
         {
             get
             {
-                return clientes;
+                return cliente;
             }
 
             set
             {
-                clientes = value;
+                cliente = value;
             }
         }
 
-        internal List<Banco> Bancos
+        internal Banco Banco
         {
             get
             {
-                return bancos;
+                return banco;
             }
 
             set
             {
-                bancos = value;
+                banco = value;
             }
         }
         #endregion

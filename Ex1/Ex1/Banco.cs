@@ -25,17 +25,14 @@ namespace Ex1
             }
         }
 
-        internal List<Conta> Contas
+        public List<Conta> getContas()
         {
-            get
-            {
-                return contas;
-            }
+            return contas;
+        }
 
-            set
-            {
-                contas = value;
-            }
+        public void setConta(Conta conta)
+        {
+            contas.Add(conta);
         }
         #endregion
 
