@@ -65,6 +65,7 @@ namespace Ex1
             if (hashClientes.ContainsKey(cpf))
             {
                 hashClientes[cpf].RmvCachorro(nomeCachorro);
+                return true;
             }
 
             return false;

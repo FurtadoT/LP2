@@ -12,6 +12,12 @@ namespace Ex1
         private long cpf;
         private List<Cachorro> cachorros = new List<Cachorro>();
 
+        public Pessoa(string nome, long cpf)
+        {
+            this.Nome = nome;
+            this.Cpf = cpf;
+        }
+
         public string Nome
         {
             get
